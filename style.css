@@ -25,6 +25,12 @@ a {
 	color: #ff8000;
 }
 
+.gm img {
+	height: 32px; 
+	width: 32px; 
+	vertical-align: middle;
+}
+
 #password {
 	margin-top: 15px;
 	margin-bottom: 15px;
