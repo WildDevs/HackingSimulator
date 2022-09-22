@@ -31,18 +31,20 @@
 	</ul>
 
 </body>
-
+<script src="script.js"></script>
 <script>
 	var password = document.getElementById("password");
 	password.addEventListener("keypress", (event) => {
 		if (event.key === "Enter") {
 			event.preventDefault();
 
-			if (password.value != String.fromCharCode(119, 105, 108, 100)) {
-				alert("Try again");
-			} else {
-				alert("Good Job!");
-			}
+			// if (password.value != "null") {
+			// 	alert("Try again");
+			// } else {
+			// 	alert("Good Job!");
+			// }
+
+			nextLevel(1, password.value);
 		}
 	});
 </script>

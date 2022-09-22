@@ -1,0 +1,44 @@
+<html>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Hacking Simulator | Wild Devs | Level 3</title>
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+</head>
+
+<body>
+    <ul id="console">
+        <h3>Prove your knowledge in web technology, programming languages and hacking.</h3>
+        <li>
+            <span>A hacking simulator by the <a href="https://wild-devs.net">Wild Devs Community</a>.</span>
+        </li>
+
+        <span class="gm">Dr. Riddle</span>:
+        It seems you are really wild! You must belong to the Wild Devs.<br />
+
+        <span class="gm">Dr. Riddle</span>:
+        But now, you have to look deeper. Sometimes we don't see the obvious.<br />
+
+        <h2>Level #3</h2>
+        Password: <input type="text" name="pRaL6y1s" id="password"></input>
+    </ul>
+
+</body>
+<script src="script.js"></script>
+<script>
+    var password = document.getElementById("password");
+    password.addEventListener("keypress", (event) => {
+        if (event.key === "Enter") {
+            event.preventDefault();
+
+            nextLevel(3, password.value);
+        }
+    });
+</script>
+
+</html>

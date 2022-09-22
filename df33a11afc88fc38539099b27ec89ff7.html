@@ -1,0 +1,50 @@
+<html>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Hacking Simulator | Wild Devs | Level 2 | String.fromCharCode(119, 105, 108, 100)</title>
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+</head>
+
+<body>
+    <ul id="console">
+        <h3>Prove your knowledge in web technology, programming languages and hacking.</h3>
+        <li>
+            <span>A hacking simulator by the <a href="https://wild-devs.net">Wild Devs Community</a>.</span>
+        </li>
+
+        <span class="gm">Dr. Riddle</span>:
+        How... how did you get there? This is a hidden place! You are not allowed to
+        be here! How is it even possible?<br />
+
+        <span class="gm">Dr. Riddle</span>:
+        By the way, Dr. Riddle. I will stop you from continuing until you show me
+        that you are worth being here.<br />
+
+        <span class="gm">Dr. Riddle</span>:
+        It looks like you have a lot of experience. Then let's put you to the test.
+        I will keep it easy, for now.
+
+        <h2>Level #2</h2>
+        Password: <input type="text" id="password"></input>
+    </ul>
+
+</body>
+<script src="script.js"></script>
+<script>
+    var password = document.getElementById("password");
+    password.addEventListener("keypress", (event) => {
+        if (event.key === "Enter") {
+            event.preventDefault();
+
+            nextLevel(2, password.value);
+        }
+    });
+</script>
+
+</html>

@@ -21,6 +21,10 @@ a {
 	text-decoration: none;
 }
 
+.gm {
+	color: #ff8000;
+}
+
 #password {
 	margin-top: 15px;
 	margin-bottom: 15px;
