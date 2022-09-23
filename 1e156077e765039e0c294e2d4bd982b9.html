@@ -1,1 +1,48 @@
-Level 8
+<html>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Hacking Simulator | Wild Devs | Level 8</title>
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+</head>
+<style>
+    body {
+        background: rgb(0, 0, 0);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(70, 24, 24, 0.8547794117647058) 53%, rgba(0, 0, 0, 1) 100%);
+    }
+</style>
+
+<body>
+    <ul id="console">
+        <h3>Prove your knowledge in web technology, programming and hacking.</h3>
+        <li>
+            <span>A hacking simulator by the <a href="https://wild-devs.net">Wild Devs Community</a>.</span>
+        </li>
+
+        <span class="betty"><img src="images/betty.png" /> Betty</span>: Mh... it still... dark here and scary.<br />
+        <span class="betty"><img src="images/betty.png" /> Betty</span>: We need to find more hints to get out of
+        here.<br />
+        <span class="gm"><img src="images/riddler.png" /> Dr. Riddler</span>: We need to find more hints to get out of
+        here.<br />
+        <h2>Level #8</h2>
+    </ul>
+
+</body>
+<script src="script.js"></script>
+<script>
+    var password = document.getElementById("password");
+    password.addEventListener("keypress", (event) => {
+        if (event.key === "Enter") {
+            event.preventDefault();
+
+            nextLevel(8, password.value);
+        }
+    });
+</script>
+
+</html>
