@@ -37,4 +37,10 @@ switch ($_GET['level']) {
             ? '1e156077e765039e0c294e2d4bd982b9.html'
             : 'incorrect';
         break;
+    case 8:
+        // 6a8748ff2a49f969f70a92625581adde = Level 9
+        echo $_GET['pass'] == 'BreakOut'
+            ? '6a8748ff2a49f969f70a92625581adde.html'
+            : 'incorrect';
+        break;
 }
