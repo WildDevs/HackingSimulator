@@ -31,6 +31,16 @@ a {
 	vertical-align: middle;
 }
 
+.betty {
+	color: #8b004d;
+}
+
+.betty img {
+	height: 32px; 
+	width: 32px; 
+	vertical-align: middle;
+}
+
 #password {
 	margin-top: 15px;
 	margin-bottom: 15px;
