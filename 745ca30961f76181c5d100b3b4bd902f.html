@@ -18,20 +18,30 @@
             <span>A hacking simulator by the <a href="https://wild-devs.net">Wild Devs Community</a>.</span>
         </li>
 
-
+        <span class="betty"><img src="images/betty.png" /> Unknown</span>: Hey there! I'm glad that you figured it out
+        how to escape Dr. Riddle.<br />
+        <span class="betty"><img src="images/betty.png" /> Betty</span>: I'm Betty, been here for a while and stuck at
+        this level.<br />
+        <span class="betty"><img src="images/betty.png" /> Betty</span>: Can you help me to get out of here? I don't
+        like this dark place.<br />
+        <br /><br />
+        <strong><i>It's so dark here that Betty and you can't see anything, but she's sure there must be
+                something.</i></strong>
+        <br /><br />
         <h2>Level #6</h2>
         Password: <input type="text" id="password"></input>
     </ul>
 
 </body>
 <script src="script.js"></script>
+<img style="display:none" src="images/qrcode.png" />
 <script>
     var password = document.getElementById("password");
     password.addEventListener("keypress", (event) => {
         if (event.key === "Enter") {
             event.preventDefault();
 
-            nextLevel(4, password.value);
+            nextLevel(6, password.value);
         }
     });
 </script>
