@@ -18,23 +18,19 @@
             <span>A hacking simulator by the <a href="https://wild-devs.net">Wild Devs Community</a>.</span>
         </li>
 
-        <span class="gm"><img src="images/riddler.png" /> Dr. Riddler</span>:
-        How... how did you get there? This is a hidden place! You are not allowed to
-        be here! How is it even possible?<br />
-
-        <span class="gm"><img src="images/riddler.png" /> Dr. Riddler</span>:
-        By the way, I am Dr. Riddler, the creator of this world, MY WORLD! I will stop you from continuing until you
-        show me that you are worth being here.<br />
-
-        <span class="gm"><img src="images/riddler.png" /> Dr. Riddler</span>:
-        It looks like you have a lot of experience. Then let's put you to the test.
-        I will keep it easy, for now... hahahahaha.
-
         <h2>Level #2</h2>
+        <span class="gm" id="talker"></span>:
+        <div id="dialog"></div><br />
         Password: <input type="text" id="password"></input>
     </ul>
 
 </body>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+
 <script src="script.js"></script>
 <script>
     var password = document.getElementById("password");
@@ -45,6 +41,20 @@
             nextLevel(2, password.value);
         }
     });
+
+    var story = [
+        {
+            name: 'Dr. Riddler',
+            image: 'images/riddler.png',
+            dialogs: [
+                'How... how did you get there? This is a hidden place! You are not allowed to be here! How is it even possible?',
+                'I am Dr. Riddler, the creator of this world, MY WORLD! I will stop you from continuing until you show me that you are worth being here.', 
+                'It looks like you have a lot of experience. Then let\'s put you to the test. I will keep it easy, for now... hahahahaha.'
+            ]
+        }
+    ];
+	
+	startDialog(story);
 </script>
 
 </html>

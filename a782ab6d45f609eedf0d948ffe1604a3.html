@@ -18,22 +18,46 @@
             <span>A hacking simulator by the <a href="https://wild-devs.net">Wild Devs Community</a>.</span>
         </li>
 
-        <span class="gm"><img src="images/riddler.png" /> Dr. Riddler</span>:
-        Okay okay, it's enough. This is the end of the road for you. <br />
-        <span class="gm"><img src="images/riddler.png" /> Dr. Riddler</span>: I'm closing all the doors now. You are
-        trapped here and there is no escape. I win, you lose,
-        HAHAHAHAHA<br /><br />
-
-        <strong><i>From a dark corner comes a quiet whisper</i></strong><br /><br />
-
-        <span class="betty"><img src="images/betty.png" /> Unknown</span>: Psssst, don't look at me, I'm hiding from Dr.
-        Riddler. He keeps me imprisoned here too in his cruel world, but I escaped this level.<br />
-        <span class="betty"><img src="images/betty.png" /> Unknown</span>: He is hashing his levels in the url. You need
-        to escape too and meet me in the "level6", I will wait for
-        you.<br />
+        <span class="gm" id="talker"></span>:
+        <div id="dialog"></div><br />
         <h2>Level #5</h2>
     </ul>
 
 </body>
+<script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
 
+<script src="script.js"></script>
+<script>
+    var story = [
+        {
+            name: 'Dr. Riddler',
+            image: 'images/riddler.png',
+            dialogs: [
+                'Okay okay, it\'s enough. This is the end of the road for you.',
+                'I\'m closing all the doors now. You are trapped here and there is no escape. I win, you lose, HAHAHAHAHA'
+            ]
+        },
+        {
+            name: 'System',
+            image: 'images/system.png',
+            dialogs: [
+                'From a dark corner comes a quiet whisper...'
+            ]
+        },
+        {
+            name: 'Unknown',
+            image: 'images/betty.png',
+            dialogs: [
+                'Psssst, don\'t look at me, I\'m hiding from Dr. Riddler.', 
+                'He keeps me imprisoned here too in his cruel world, but I escaped this level.',
+                'He is hashing his levels in the url. You need to escape too and meet me in the "level6", I will wait for you.'
+            ]
+        }
+    ];
+	
+	startDialog(story);
+</script>
 </html>

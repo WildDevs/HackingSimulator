@@ -51,3 +51,60 @@ a {
 	font-size: 14px;
 	border: 1px solid white;
 }
+
+@-webkit-keyframes arrow_anim {
+	from { margin-top: 58px; }
+	  to { margin-top: 67px; }
+ }
+ 
+ @-moz-keyframes arrow_anim {
+	from { margin-top: 58px; }
+	  to { margin-top: 67px; }
+ }
+ 
+ @-ms-keyframes arrow_anim {
+	from { margin-top: 58px; }
+	  to { margin-top: 67px; }
+ }
+ 
+ @-o-keyframes arrow_anim {
+	from { margin-top: 58px; }
+	  to { margin-top: 67px; }
+ }
+ 
+ @keyframes arrow_anim {
+	from { margin-top: 58px; }
+	  to { margin-top: 67px; }
+ }
+ 
+ #arrow {
+	 border-left: 10px solid transparent;
+	 border-right: 10px solid transparent;
+	 border-top: 10px solid red;
+   height: 0; 
+   margin: 60px 200px 0px 360px;
+   position: absolute;
+   width: 0; 
+   
+   -webkit-animation: arrow_anim .3s steps(3) infinite;
+   -moz-animation: arrow_anim .3s steps(3) infinite;
+   -ms-animation: arrow_anim .3s steps(3) infinite;
+   -o-animation: arrow_anim .3s steps(3) infinite;
+   animation: arrow_anim .3s steps(3) infinite;
+ }
+ 
+ #dialog {
+    height: 70px;
+    background: #1c1c1c;
+    border-radius: 2px;
+    box-shadow: 0 0 0 2px #bdbdbd, 0 0 0 6px #3e3e3e;
+    color: #686868;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 20px;
+    position: relative;
+    /* text-transform: uppercase; */
+    word-spacing: 3px;
+    width: 400px;
+}

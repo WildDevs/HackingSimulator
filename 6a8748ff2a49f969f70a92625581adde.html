@@ -18,15 +18,19 @@
             <span>A hacking simulator by the <a href="https://wild-devs.net">Wild Devs Community</a>.</span>
         </li>
 
-        <h3>
-            m n t e n n r v e i o
-        </h3>
-
         <h2>Level #9</h2>
+        <span class="gm" id="talker"></span>:
+        <div id="dialog"></div><br />
         Password: <input type="text" id="password"></input>
     </ul>
 
 </body>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+  
 <script src="script.js"></script>
 <script>
     var password = document.getElementById("password");
@@ -37,6 +41,17 @@
             nextLevel(9, password.value);
         }
     });
+    var story = [
+        {
+            name: 'System',
+            image: 'images/system.png',
+            dialogs: [
+                'm n t e n n r v e i o'
+            ]
+        },
+    ];
+	
+	startDialog(story);
 </script>
 
 </html>

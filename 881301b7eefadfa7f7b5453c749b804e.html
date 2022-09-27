@@ -17,10 +17,10 @@
         <li>
             <span>A hacking simulator by the <a href="https://wild-devs.net">Wild Devs Community</a>.</span>
         </li>
-
-        <span class="gm"><img src="images/riddler.png" /> Dr. Riddler</span>:
-        Do you like jokes? No? I will tell you anyway.<br /><br />
-
+        
+        <h2>Level #4</h2>
+        <span class="gm" id="talker"></span>:
+        <div id="dialog"></div><br />
         <div style="width: 30%; border: #808080 dashed 2px; padding: 15px; margin: 10px;">
             Two strings walk into a bar and sit down. The bartender says, “So what'll it be?”<br /><br />
 
@@ -28,13 +28,17 @@
             r89nvy~~owmc63^Dz x.xvcu”<br /><br />
 
             “Please excuse my friend,” the second string says, “He isn't null-terminated.”
-        </div>
-
-        <h2>Level #4</h2>
+        </div></div><br />
         Password: <input type="text" id="password"></input>
     </ul>
 
 </body>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+
 <script src="script.js"></script>
 <script>
     var password = document.getElementById("password");
@@ -45,6 +49,18 @@
             nextLevel(4, password.value);
         }
     });
+
+    var story = [
+        {
+            name: 'Dr. Riddler',
+            image: 'images/riddler.png',
+            dialogs: [
+                'Do you like jokes? No? I will tell you anyway.'
+            ]
+        }
+	];
+	
+	startDialog(story);
 </script>
 
 </html>

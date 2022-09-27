@@ -18,21 +18,20 @@
             <span>A hacking simulator by the <a href="https://wild-devs.net">Wild Devs Community</a>.</span>
         </li>
 
-        <span class="betty"><img src="images/betty.png" /> Unknown</span>: Hey there! I'm glad that you figured it out
-        how to escape Dr. Riddler.<br />
-        <span class="betty"><img src="images/betty.png" /> Betty</span>: I'm Betty, been here for a while and stuck at
-        this level.<br />
-        <span class="betty"><img src="images/betty.png" /> Betty</span>: Can you help me to get out of here? I don't
-        like this dark place.<br />
-        <br /><br />
-        <strong><i>It's so dark here that Betty and you can't see anything, but she's sure there must be
-                something.</i></strong>
-        <br /><br />
         <h2>Level #6</h2>
+        <span class="gm" id="talker"></span>:
+        <div id="dialog"></div><br />
+
         Password: <input type="text" id="password"></input>
     </ul>
 
 </body>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+
 <script src="script.js"></script>
 <img style="display:none" src="images/qrcode.png" />
 <script>
@@ -44,6 +43,26 @@
             nextLevel(6, password.value);
         }
     });
+    var story = [
+        {
+            name: 'Betty',
+            image: 'images/betty.png',
+            dialogs: [
+                'Hey there! I\'m glad that you figured it out how to escape Dr. Riddler.', 
+                'I\'m Betty, been here for a while and stuck at this level.',
+                'Can you help me to get out of here? I don\'t like this dark place.'
+            ]
+        },
+        {
+            name: 'System',
+            image: 'images/system.png',
+            dialogs: [
+                'It\'s so dark here that Betty and you can\'t see anything, but she\'s sure there must be something.'
+            ]
+        },
+    ];
+	
+	startDialog(story);
 </script>
 
 </html>

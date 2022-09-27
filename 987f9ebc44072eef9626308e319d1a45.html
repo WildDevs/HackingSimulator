@@ -24,20 +24,20 @@
         <li>
             <span>A hacking simulator by the <a href="https://wild-devs.net">Wild Devs Community</a>.</span>
         </li>
-        <br />
         <!-- images -->
-        <span class="betty"><img src="images/betty.png" /> Betty</span>: There is light! THERE IS LIGHT! Can you see it?
-        FINALLY. THANK YOU <span style='font-size:24px;'>&#128149;</span>
-        <br />
-
-        <span class="betty"><img src="images/betty.png" /> Betty</span>: Let's continue. Light it up and open the door.
-        <br />
-
         <h2>Level #7</h2>
+        <span class="gm" id="talker"></span>:
+        <div id="dialog"></div><br />
         Password: <input type="text" id="password"></input>
     </ul>
 </body>
 <!-- psd -->
+
+<script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+
 <script src="script.js"></script>
 <script>
     var password = document.getElementById("password");
@@ -48,6 +48,18 @@
             nextLevel(7, password.value);
         }
     });
+    var story = [
+        {
+            name: 'Betty',
+            image: 'images/betty.png',
+            dialogs: [
+                'There is light! THERE IS LIGHT! Can you see it? FINALLY. THANK YOU <3', 
+                'Let\'s continue. Light it up and open the door.'
+            ]
+        },
+    ];
+	
+	startDialog(story);
 </script>
 
 </html>

@@ -18,24 +18,19 @@
         <li>
             <span>A hacking simulator by the <a href="https://wild-devs.net">Wild Devs Community</a>.</span>
         </li>
-
-        <span class="betty"><img src="images/betty.png" /> Betty</span>: Mh... it still... dark here and scary.<br />
-        <span class="betty"><img src="images/betty.png" /> Betty</span>: We need to find more hints to get out of
-        here.<br /><br />
-        <span class="gm"><img src="images/riddler.png" /> Dr. Riddler</span>: Hey! What are you doing here?! Where do
-        you want to go? THERE IS NO ESCAPE! <br />
-        <span class="gm"><img src="images/riddler.png" /> Dr. Riddler</span>: I will make sure that you will not get any
-        futher. You are my hostages here <strong>IN</strong> my world!<br />
-
-        <img src="images/The_Blue_Marble.png" alt="m a n y t o o l s o r g" />
-
-        <br />
-
         <h2>Level #8</h2>
+        <span class="gm" id="talker"></span>:
+        <div id="dialog"></div><br />
+        <img src="images/The_Blue_Marble.png" alt="m a n y t o o l s o r g" /><br />
         Password: <input type="text" id="password"></input>
     </ul>
 
 </body>
+<script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+
 <script src="script.js"></script>
 <script>
     var password = document.getElementById("password");
@@ -46,6 +41,26 @@
             nextLevel(8, password.value);
         }
     });
+    var story = [
+        {
+            name: 'Betty',
+            image: 'images/betty.png',
+            dialogs: [
+                'Mh... it still... dark here and scary.', 
+                'We need to find more hints to get out of here.',
+            ]
+        },
+        {
+            name: 'Dr. Riddler',
+            image: 'images/riddler.png',
+            dialogs: [
+                'Hey! What are you doing here?! Where do you want to go? THERE IS NO ESCAPE!',
+                'I will make sure that you will not get any futher. You are my hostages here IN my world!'
+            ]
+        },
+    ];
+	
+	startDialog(story);
 </script>
 
 </html>
